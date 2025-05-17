@@ -60,7 +60,6 @@
             border: 2px dashed #0072c6;
             border-radius: 8px;
         }
-
         button#tipsBtn {
             background: #0072c6;
             color: white;
@@ -87,13 +86,66 @@
             border-radius: 8px;
             margin-bottom: 3rem;
         }
-
         section#setup {
             background-color: #fff9f1;
             padding: 2rem;
             border-radius: 8px;
         }
-
+        #backToTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: #0072c6;
+            color: white;
+            cursor: pointer;
+            padding: 12px 20px;
+            border-radius: 50px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            transition: background 0.2s;
+        }
+        #backToTopBtn:hover {
+            background-color: #005a9e;
+        }
+        /* Responsive styles */
+        @media (max-width: 600px) {
+            main {
+                max-width: 100%;
+                margin: 0;
+                padding: 1rem;
+                box-shadow: none;
+            }
+            header {
+                padding: 0.5rem;
+            }
+            nav a {
+                margin: 0 0.5rem;
+                font-size: 1rem;
+            }
+            section#install,
+            section#setup {
+                padding: 1rem;
+                border-radius: 0;
+            }
+            .step-box {
+                padding: 0.7rem;
+                font-size: 1rem;
+            }
+            .image-box {
+                max-height: 200px;
+                margin-top: 0.5rem;
+            }
+            #backToTopBtn {
+                bottom: 16px;
+                right: 16px;
+                font-size: 16px;
+                padding: 10px 16px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -162,7 +214,6 @@
                 <img src="image/congratulations.jpg" alt="Account Ready" class="image-box" />
             </div>
 
-
             <script>
             // Smooth scroll with transition for nav links
             document.addEventListener("DOMContentLoaded", function() {
@@ -193,28 +244,6 @@
                     };
                 });
             </script>
-            <style>
-                #backToTopBtn {
-                    display: none;
-                    position: fixed;
-                    bottom: 40px;
-                    right: 40px;
-                    z-index: 99;
-                    font-size: 18px;
-                    border: none;
-                    outline: none;
-                    background-color: #0072c6;
-                    color: white;
-                    cursor: pointer;
-                    padding: 12px 20px;
-                    border-radius: 50px;
-                    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-                    transition: background 0.2s;
-                }
-                #backToTopBtn:hover {
-                    background-color: #005a9e;
-                }
-            </style>
         </section>
     </main>
 </body>
